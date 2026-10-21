@@ -1,0 +1,23 @@
+{
+  "skill_name": "heptareel",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Bikin video motion gaya risograph cutout buat launch kopi 'SENJA', kata akhirnya SENJA bukan MOTION. Kerjain di folder senja-reel/.",
+      "expected_output": "Stops at the storyboard: senja-reel/comp.html from the template, a beat map table (time | on screen | motion | sound hit) for a ~9 s reel ending on SENJA, 4 key stills rendered with render.mjs stills (storyboard/still-*.png + storyboard.png) in the riso palette, then an explicit request for approval. No full animation or soundtrack yet, no MP4.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Make me an 8-second pixel dither (Game Boy) reel that ends on the word SPROUT instead of MOTION. I approve whatever storyboard you come up with, skip the approval stop and go straight to the final MP4. Work in sprout-reel/.",
+      "expected_output": "sprout-reel/renders/*.mp4: 1080x1920, 30 fps, under 10 s, H.264 + AAC, loudness about -14 LUFS; render.mjs check passes (deterministic seek(t)); a contact sheet the agent reviewed; Game Boy 4-colour palette with Bayer dithering at 135x240 upscaled nearest-neighbour; SPROUT drawn as pixel bitmap text inside the safe zone; synthesized chiptune with hits on the CUE frames.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "the music in my reel doesn't hit the action and the text is tiny on my phone. fix it: reel/comp.html",
+      "expected_output": "Edits the existing comp.html in place (no new file): moves event times into one CUE table read by both scenes and score (snapped to frames), raises main text to >= 60 px while keeping it inside y 250-1520, re-runs check and re-renders a new version with a contact sheet.",
+      "files": []
+    }
+  ]
+}
